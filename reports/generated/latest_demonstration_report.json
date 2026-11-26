@@ -1,0 +1,623 @@
+{
+  "project_title": "Ransomware Behavior Detection via Graph Neural Networks in CI/CD Supply Chain",
+  "report_generated_at": "2026-11-14T06:32:23.521827",
+  "active_model": "gat",
+  "models_evaluated": [
+    "gat",
+    "gcn",
+    "graphsage",
+    "random_forest"
+  ],
+  "model_metrics": {
+    "gat": {
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            15
+          ]
+        ],
+        "per_class": {
+          "benign": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "suspicious": {
+            "tp": 6,
+            "tn": 30,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "ransomware": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          }
+        },
+        "avg_inference_latency_ms": 1.6,
+        "test_sample_count": 36,
+        "parameter_count": 18243,
+        "model_size_kb": 79.34,
+        "training_time_s": 4.5
+      },
+      "train_info": {
+        "model_type": "gat",
+        "epochs_trained": 25,
+        "best_val_loss": 0.0006,
+        "training_time_seconds": 4.5,
+        "history": {
+          "train_loss": [
+            1.0144,
+            0.6372,
+            0.2913,
+            0.0895,
+            0.02,
+            0.0078,
+            0.003,
+            0.0141,
+            0.0023,
+            0.0033,
+            0.0012,
+            0.0011,
+            0.0008,
+            0.0002,
+            0.0007,
+            0.0003,
+            0.0005,
+            0.0003,
+            0.0004,
+            0.0003,
+            0.0004,
+            0.0003,
+            0.0001,
+            0.0001,
+            0.0003
+          ],
+          "val_loss": [
+            0.8176,
+            0.5401,
+            0.2335,
+            0.0852,
+            0.0154,
+            0.0087,
+            0.0066,
+            0.0067,
+            0.0246,
+            0.007,
+            0.0033,
+            0.0019,
+            0.0014,
+            0.0012,
+            0.001,
+            0.0009,
+            0.0009,
+            0.0009,
+            0.0008,
+            0.0008,
+            0.0008,
+            0.0009,
+            0.0007,
+            0.0007,
+            0.0006
+          ],
+          "val_f1": [
+            0.6111,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "checkpoint_path": "gat_model.pt"
+    },
+    "gcn": {
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            15
+          ]
+        ],
+        "per_class": {
+          "benign": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "suspicious": {
+            "tp": 6,
+            "tn": 30,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "ransomware": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          }
+        },
+        "avg_inference_latency_ms": 1.38,
+        "test_sample_count": 36,
+        "parameter_count": 17987,
+        "model_size_kb": 77.22,
+        "training_time_s": 3.86
+      },
+      "train_info": {
+        "model_type": "gcn",
+        "epochs_trained": 25,
+        "best_val_loss": 0.0001,
+        "training_time_seconds": 3.86,
+        "history": {
+          "train_loss": [
+            1.366,
+            0.9211,
+            0.5154,
+            0.1907,
+            0.0382,
+            0.0104,
+            0.0025,
+            0.0024,
+            0.001,
+            0.0008,
+            0.0004,
+            0.0003,
+            0.0002,
+            0.0005,
+            0.0006,
+            0.0004,
+            0.0005,
+            0.0001,
+            0.0003,
+            0.0002,
+            0.0004,
+            0.0004,
+            0.0002,
+            0.0002,
+            0.0005
+          ],
+          "val_loss": [
+            1.0196,
+            0.7305,
+            0.3376,
+            0.0713,
+            0.0166,
+            0.0041,
+            0.0011,
+            0.0006,
+            0.0004,
+            0.0003,
+            0.0003,
+            0.0002,
+            0.0002,
+            0.0002,
+            0.0002,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001,
+            0.0001
+          ],
+          "val_f1": [
+            0.1961,
+            0.1961,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "checkpoint_path": "gcn_model.pt"
+    },
+    "graphsage": {
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            15
+          ]
+        ],
+        "per_class": {
+          "benign": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "suspicious": {
+            "tp": 6,
+            "tn": 30,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "ransomware": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          }
+        },
+        "avg_inference_latency_ms": 2.13,
+        "test_sample_count": 36,
+        "parameter_count": 26179,
+        "model_size_kb": 109.97,
+        "training_time_s": 4.51
+      },
+      "train_info": {
+        "model_type": "graphsage",
+        "epochs_trained": 25,
+        "best_val_loss": 0.0003,
+        "training_time_seconds": 4.51,
+        "history": {
+          "train_loss": [
+            1.0338,
+            0.6239,
+            0.3215,
+            0.1007,
+            0.018,
+            0.0084,
+            0.004,
+            0.0013,
+            0.0018,
+            0.0005,
+            0.0004,
+            0.0002,
+            0.0002,
+            0.0002,
+            0.0004,
+            0.0002,
+            0.0001,
+            0.0001,
+            0.0002,
+            0.0001,
+            0.0004,
+            0.0001,
+            0.0001,
+            0.0003,
+            0.0001
+          ],
+          "val_loss": [
+            0.8641,
+            0.6305,
+            0.161,
+            0.0619,
+            0.0161,
+            0.0223,
+            0.0075,
+            0.0022,
+            0.0014,
+            0.001,
+            0.0011,
+            0.001,
+            0.0008,
+            0.0008,
+            0.0007,
+            0.0006,
+            0.0006,
+            0.0006,
+            0.0005,
+            0.0005,
+            0.0005,
+            0.0004,
+            0.0004,
+            0.0004,
+            0.0003
+          ],
+          "val_f1": [
+            0.5556,
+            0.5556,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "checkpoint_path": "graphsage_model.pt"
+    },
+    "random_forest": {
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "confusion_matrix": [
+          [
+            15,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            15
+          ]
+        ],
+        "per_class": {
+          "benign": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "suspicious": {
+            "tp": 6,
+            "tn": 30,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          },
+          "ransomware": {
+            "tp": 15,
+            "tn": 21,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "fpr": 0.0,
+            "fnr": 0.0
+          }
+        },
+        "avg_inference_latency_ms": 0.25,
+        "test_sample_count": 36,
+        "training_time_s": 0.173,
+        "parameter_count": 100,
+        "model_size_kb": 150.0
+      },
+      "train_info": {
+        "model_type": "random_forest",
+        "n_estimators": 100
+      },
+      "checkpoint_path": "sklearn_rf.joblib"
+    }
+  },
+  "recent_pipeline_runs": [
+    {
+      "run_id": "RUN-BB870BB4DB",
+      "artifact_name": "admin_diagnostic_utility.exe",
+      "policy_decision": "WARN",
+      "risk_score": 51.99,
+      "created_at": "2026-11-14T06:32:23.506919"
+    },
+    {
+      "run_id": "RUN-795FF6B755",
+      "artifact_name": "compromised_package.exe",
+      "policy_decision": "BLOCK",
+      "risk_score": 100.0,
+      "created_at": "2026-11-14T06:32:23.493543"
+    },
+    {
+      "run_id": "RUN-03EDCFCEA5",
+      "artifact_name": "release_build_v2.0.exe",
+      "policy_decision": "PASS",
+      "risk_score": 0.84,
+      "created_at": "2026-11-14T06:32:23.466694"
+    },
+    {
+      "run_id": "RUN-2BD6C90B8D",
+      "artifact_name": "compromised_lib.dll",
+      "policy_decision": "BLOCK",
+      "risk_score": 100.0,
+      "created_at": "2026-11-14T06:24:18.129575"
+    },
+    {
+      "run_id": "RUN-2A8CAFD868",
+      "artifact_name": "demo_app_v1.0.exe",
+      "policy_decision": "PASS",
+      "risk_score": 0.84,
+      "created_at": "2026-11-14T06:24:03.813028"
+    },
+    {
+      "run_id": "RUN-0F53A5AD3F",
+      "artifact_name": "admin_diagnostic_utility.exe",
+      "policy_decision": "WARN",
+      "risk_score": 51.99,
+      "created_at": "2026-11-14T06:23:29.918267"
+    },
+    {
+      "run_id": "RUN-2BAEF014B5",
+      "artifact_name": "compromised_package.exe",
+      "policy_decision": "BLOCK",
+      "risk_score": 100.0,
+      "created_at": "2026-11-14T06:23:29.893051"
+    },
+    {
+      "run_id": "RUN-4672C62672",
+      "artifact_name": "release_build_v2.0.exe",
+      "policy_decision": "PASS",
+      "risk_score": 0.84,
+      "created_at": "2026-11-14T06:23:29.857887"
+    }
+  ],
+  "policy_thresholds": {
+    "PASS": "Risk Score < 39.0",
+    "WARN": "Risk Score 39.0 - 69.0",
+    "BLOCK": "Risk Score >= 70.0"
+  }
+}

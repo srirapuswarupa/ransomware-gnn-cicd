@@ -1,0 +1,777 @@
+{
+  "metadata": {
+    "sample_id": "BENIGN_0037_Benign-DatabaseAgent",
+    "sha256": "2f38435b89aa46a47c6cf2bc80b87051293b2517d74ae153f0385a3a5495aa40",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "benign",
+    "label_id": 0,
+    "family": "Benign-DatabaseAgent",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 52,
+    "duration_ms": 430.19
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 2.7,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "GetSystemTime",
+      "category": "System_Util",
+      "arguments": {
+        "format": "UTC"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 5.12,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "GetModuleHandle",
+      "category": "System_Util",
+      "arguments": {
+        "module": "kernel32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 8.72,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "GetProcAddress",
+      "category": "System_Util",
+      "arguments": {
+        "symbol": "VirtualAlloc"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 11.83,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "LoadLibrary",
+      "category": "System_Util",
+      "arguments": {
+        "path": "advapi32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 15.03,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "cores": 8
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 18.06,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "VirtualAlloc",
+      "category": "Process_Memory",
+      "arguments": {
+        "size": 65536,
+        "protection": "PAGE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 23.98,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 35.38,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 37.53,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x14fe"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 48.03,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 31
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 58.71,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 66.76,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 70.83,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x1307"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 81.75,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 13
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 92.06,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 106.28,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 113.06,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x17cf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 117.93,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 17
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 121.92,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 133.65,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 143.52,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xc74"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 150.93,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 40
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 162.77,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 175.2,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 187.93,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x270e"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 199.83,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 40
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 207.64,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 218.79,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 221.81,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x925"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 231.14,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 43
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 244.88,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 249.51,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 32,
+      "timestamp_ms": 258.48,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x7db"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 33,
+      "timestamp_ms": 262.62,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 45
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 34,
+      "timestamp_ms": 266.13,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_7.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 35,
+      "timestamp_ms": 270.8,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_7.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 36,
+      "timestamp_ms": 280.38,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x2535"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 37,
+      "timestamp_ms": 283.57,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 38
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 38,
+      "timestamp_ms": 296.08,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_8.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 39,
+      "timestamp_ms": 303.97,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_8.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 40,
+      "timestamp_ms": 312.65,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x2491"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 41,
+      "timestamp_ms": 320.58,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 38
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 42,
+      "timestamp_ms": 328.6,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_9.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 43,
+      "timestamp_ms": 341.09,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_9.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 44,
+      "timestamp_ms": 352.49,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x799"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 45,
+      "timestamp_ms": 359.64,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 45
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 46,
+      "timestamp_ms": 379.55,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {
+        "version": "2.2"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 47,
+      "timestamp_ms": 396.12,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "repo.internal.corp:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 48,
+      "timestamp_ms": 402.02,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "HTTP_GET_METADATA"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 49,
+      "timestamp_ms": 413.91,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "recv",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "200_OK"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 50,
+      "timestamp_ms": 420.19,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "CLEAN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 51,
+      "timestamp_ms": 430.19,
+      "process_id": 7482,
+      "process_name": "benign-databaseagent.exe",
+      "thread_id": 148,
+      "api_name": "ExitProcess",
+      "category": "System_Util",
+      "arguments": {
+        "exit_code": 0
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "sample_id": "BENIGN_0087_Benign-DocViewer",
+    "sha256": "1ab33705a3fd3111381e74f37dbb9b42d7d95735cf4c545cff6b33b38da79541",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "benign",
+    "label_id": 0,
+    "family": "Benign-DocViewer",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 40,
+    "duration_ms": 342.58
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 3.58,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "GetSystemTime",
+      "category": "System_Util",
+      "arguments": {
+        "format": "UTC"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 8.75,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "GetModuleHandle",
+      "category": "System_Util",
+      "arguments": {
+        "module": "kernel32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 12.37,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "GetProcAddress",
+      "category": "System_Util",
+      "arguments": {
+        "symbol": "VirtualAlloc"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 18.41,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "LoadLibrary",
+      "category": "System_Util",
+      "arguments": {
+        "path": "advapi32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 20.9,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "cores": 8
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 26.78,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "VirtualAlloc",
+      "category": "Process_Memory",
+      "arguments": {
+        "size": 65536,
+        "protection": "PAGE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 36.26,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 39.43,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 47.05,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x206c"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 59.27,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 48
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 65.64,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 73.83,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 85.51,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xd61"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 94.64,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 18
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 101.82,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 109.47,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 120.54,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x14b5"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 132.45,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 15
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 137.02,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 144.16,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 153.59,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x22af"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 162.89,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 45
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 168.04,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 173.5,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 181.09,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x2575"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 191.99,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 25
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 202.72,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 210.23,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 216.76,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x9a3"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 222.93,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 17
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 227.13,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 233.67,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 32,
+      "timestamp_ms": 246.35,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x574"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 33,
+      "timestamp_ms": 258.79,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 29
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 34,
+      "timestamp_ms": 272.6,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {
+        "version": "2.2"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 35,
+      "timestamp_ms": 296.08,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "repo.internal.corp:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 36,
+      "timestamp_ms": 305.75,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "HTTP_GET_METADATA"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 37,
+      "timestamp_ms": 324.46,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "recv",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "200_OK"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 38,
+      "timestamp_ms": 332.58,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "CLEAN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 39,
+      "timestamp_ms": 342.58,
+      "process_id": 6295,
+      "process_name": "benign-docviewer.exe",
+      "thread_id": 121,
+      "api_name": "ExitProcess",
+      "category": "System_Util",
+      "arguments": {
+        "exit_code": 0
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}

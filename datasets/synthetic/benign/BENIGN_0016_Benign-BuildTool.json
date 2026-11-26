@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "sample_id": "BENIGN_0016_Benign-BuildTool",
+    "sha256": "ce3e8c26f810f37f250fe1bddaab15fc36ed5e10ee77e8748d701713a1298e43",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "benign",
+    "label_id": 0,
+    "family": "Benign-BuildTool",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 28,
+    "duration_ms": 260.81
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 4.5,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "GetSystemTime",
+      "category": "System_Util",
+      "arguments": {
+        "format": "UTC"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 6.36,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "GetModuleHandle",
+      "category": "System_Util",
+      "arguments": {
+        "module": "kernel32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 11.23,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "GetProcAddress",
+      "category": "System_Util",
+      "arguments": {
+        "symbol": "VirtualAlloc"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 16.77,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "LoadLibrary",
+      "category": "System_Util",
+      "arguments": {
+        "path": "advapi32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 21.51,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "cores": 8
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 25.89,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "VirtualAlloc",
+      "category": "Process_Memory",
+      "arguments": {
+        "size": 65536,
+        "protection": "PAGE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 35.03,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 49.09,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 56.78,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x10ef"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 67.86,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 27
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 82.51,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 92.42,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 97.54,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xbad"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 101.59,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 11
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 108.9,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 113.82,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 126.76,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x4c8"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 130.23,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 45
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 138.71,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 150.03,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 158.64,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xb6c"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 164.2,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 19
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 188.8,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {
+        "version": "2.2"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 198.68,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "repo.internal.corp:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 214.7,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "HTTP_GET_METADATA"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 227.37,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "recv",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "200_OK"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 250.81,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "CLEAN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 260.81,
+      "process_id": 7387,
+      "process_name": "benign-buildtool.exe",
+      "thread_id": 377,
+      "api_name": "ExitProcess",
+      "category": "System_Util",
+      "arguments": {
+        "exit_code": 0
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}

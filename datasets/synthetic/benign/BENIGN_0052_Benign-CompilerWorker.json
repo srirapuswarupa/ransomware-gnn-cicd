@@ -1,0 +1,718 @@
+{
+  "metadata": {
+    "sample_id": "BENIGN_0052_Benign-CompilerWorker",
+    "sha256": "13760eeda04128399d5009a1b5e9712706b36ed903e170606ddec239c06cb3ed",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "benign",
+    "label_id": 0,
+    "family": "Benign-CompilerWorker",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 48,
+    "duration_ms": 409.27
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 4.04,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "GetSystemTime",
+      "category": "System_Util",
+      "arguments": {
+        "format": "UTC"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 9.66,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "GetModuleHandle",
+      "category": "System_Util",
+      "arguments": {
+        "module": "kernel32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 16.59,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "GetProcAddress",
+      "category": "System_Util",
+      "arguments": {
+        "symbol": "VirtualAlloc"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 22.51,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "LoadLibrary",
+      "category": "System_Util",
+      "arguments": {
+        "path": "advapi32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 24.44,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "cores": 8
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 30.49,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "VirtualAlloc",
+      "category": "Process_Memory",
+      "arguments": {
+        "size": 65536,
+        "protection": "PAGE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 35.66,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 49.68,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 53.19,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x132d"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 63.15,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 13
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 73.81,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 84.36,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 88.65,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x76d"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 90.81,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 29
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 94.94,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 109.33,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 118.13,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xcb0"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 130.31,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 10
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 137.14,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 148.89,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 162.25,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x147f"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 173.77,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 20
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 180.13,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 187.71,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 196.52,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xb76"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 201.94,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 11
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 209.86,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 216.54,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_5.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 225.03,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x8d6"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 234.4,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 41
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 239.72,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 243.06,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_6.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 32,
+      "timestamp_ms": 252.52,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x1b70"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 33,
+      "timestamp_ms": 263.91,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 20
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 34,
+      "timestamp_ms": 265.95,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_7.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 35,
+      "timestamp_ms": 279.11,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_7.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 36,
+      "timestamp_ms": 281.27,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x1286"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 37,
+      "timestamp_ms": 283.87,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 42
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 38,
+      "timestamp_ms": 297.83,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_8.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 39,
+      "timestamp_ms": 302.16,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_8.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 40,
+      "timestamp_ms": 316.64,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x1b33"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 41,
+      "timestamp_ms": 319.1,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 34
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 42,
+      "timestamp_ms": 338.38,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {
+        "version": "2.2"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 43,
+      "timestamp_ms": 356.5,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "repo.internal.corp:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 44,
+      "timestamp_ms": 365.99,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "HTTP_GET_METADATA"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 45,
+      "timestamp_ms": 375.95,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "recv",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "200_OK"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 46,
+      "timestamp_ms": 399.27,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "CLEAN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 47,
+      "timestamp_ms": 409.27,
+      "process_id": 6394,
+      "process_name": "benign-compilerworker.exe",
+      "thread_id": 267,
+      "api_name": "ExitProcess",
+      "category": "System_Util",
+      "arguments": {
+        "exit_code": 0
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}

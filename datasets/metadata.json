@@ -1,0 +1,44 @@
+{
+  "dataset_name": "Antigravity-PASAC-Ransomware-Dynamic-Traces-v1",
+  "version": "1.0.0",
+  "platform": "windows_x64",
+  "collection_method": "Dynamic Trace Simulation Engine grounded in empirical ransomware kill-chain analysis from literature (Amer et al. 2026, Cen et al. 2025, Lin et al. 2025)",
+  "license": "Defensive Research and Educational Use Only",
+  "safety_statement": "All samples are fully synthetic behavioral traces representing Windows API calls. No destructive malware, real encryption payloads, or active exploits were executed or stored.",
+  "labels": {
+    "0": "benign (standard developer tools, compiler processes, office utilities, system diagnostics)",
+    "1": "suspicious (dual-use recon, process injection, persistence scripts, unencrypted network beacons)",
+    "2": "ransomware (full kill-chain: anti-debug, shadow copy deletion via vssadmin, cryptographic initialization, multi-threaded mass file encryption, and extortion note generation)"
+  },
+  "families": [
+    "LockBit3-Sim",
+    "WannaCry-Sim",
+    "Conti-Sim",
+    "BlackCat-Sim",
+    "Phobos-Sim",
+    "Suspicious-ReconTool",
+    "Suspicious-ProcessInjector",
+    "Suspicious-PersistScript",
+    "Suspicious-NetworkScanner",
+    "Benign-BuildTool",
+    "Benign-CompilerWorker",
+    "Benign-DocViewer",
+    "Benign-DatabaseAgent",
+    "Benign-SystemMonitor"
+  ],
+  "feature_schema": {
+    "node_features": [
+      "api_identity_embedding_index",
+      "category_one_hot (9 dimensions)",
+      "frequency_normalized",
+      "relative_timestamp_normalized",
+      "pre_attack_sensitive_flag (PASAC)",
+      "thread_switch_indicator"
+    ],
+    "edge_features": [
+      "temporal_delta_ms",
+      "edge_type (0=sequential, 1=thread_continuation, 2=data_resource_dependency)"
+    ]
+  },
+  "known_limitations": "Synthetic behavior modeling simulates API invocation sequences and parameters without low-level kernel driver hooks (ETW/Sysmon kernel events) or external network packet captures."
+}

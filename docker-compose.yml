@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DATABASE_URL=sqlite:///./backend/ransomware_gnn.db
+      - DEFAULT_MODEL=gat
+    volumes:
+      - ./datasets:/app/datasets
+      - ./ml/experiments:/app/ml/experiments
+      - ./reports:/app/reports
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

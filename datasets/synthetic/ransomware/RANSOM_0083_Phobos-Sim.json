@@ -1,0 +1,2640 @@
+{
+  "metadata": {
+    "sample_id": "RANSOM_0083_Phobos-Sim",
+    "sha256": "1d977ec6ab2e000691ca84cca4a07dd9786cc160e23817ebc281d336bf83c085",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "ransomware",
+    "label_id": 2,
+    "family": "Phobos-Sim",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 179,
+    "duration_ms": 406.7
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 4.5,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "IsDebuggerPresent",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 6.58,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CheckRemoteDebuggerPresent",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 8.34,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetComputerName",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 12.16,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 13.42,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetLogicalDrives",
+      "category": "File_Enumeration",
+      "arguments": {
+        "mask": "0x3F"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 17.18,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "C:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 21.62,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "D:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 24.04,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "Z:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 30.85,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "ShellExecute",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "file": "vssadmin.exe",
+        "parameters": "delete shadows /all /quiet",
+        "show": "SW_HIDE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 37.1,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CreateProcess",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "app": "bcdedit.exe",
+        "cmdline": "/set {default} recoveryenabled No"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 48.74,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CreateProcess",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "app": "wbadmin.exe",
+        "cmdline": "delete catalog -quiet"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 53.42,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "RegOpenKeyEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "root": "HKLM",
+        "subkey": "SYSTEM\\CurrentControlSet\\Services"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 63.4,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "RegSetValueEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "value_name": "DisableMonitoring",
+        "data": "1"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 66.03,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CryptAcquireContext",
+      "category": "Cryptography",
+      "arguments": {
+        "provider": "PROV_RSA_AES",
+        "flags": "CRYPT_VERIFYCONTEXT"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 69.46,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CryptGenRandom",
+      "category": "Cryptography",
+      "arguments": {
+        "bytes": 32
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 76.5,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CryptGenKey",
+      "category": "Cryptography",
+      "arguments": {
+        "alg_id": "CALG_AES_256"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 81.61,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CryptExportKey",
+      "category": "Cryptography",
+      "arguments": {
+        "key_blob": "<MASTER_PUBLIC_KEY>"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 86.26,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 93.76,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "<REMOTE_IP>:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 98.53,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "EXFILTRATE_SESSION_KEY",
+        "size": 512
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 101.37,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 103.37,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "FindFirstFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\*"
+      },
+      "return_value": "VALID_HANDLE",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 107.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_0.jpg"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 108.74,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.jpg",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 111.09,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 113.74,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 114.62,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 115.36,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_0.jpg",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_0.jpg.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 117.22,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.jpg.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 119.49,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 121.56,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 123.75,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 32,
+      "timestamp_ms": 126.0,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 33,
+      "timestamp_ms": 127.85,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 34,
+      "timestamp_ms": 128.62,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 35,
+      "timestamp_ms": 129.57,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 36,
+      "timestamp_ms": 132.39,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.xlsx.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 37,
+      "timestamp_ms": 132.91,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 38,
+      "timestamp_ms": 134.77,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_2.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 39,
+      "timestamp_ms": 136.5,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 40,
+      "timestamp_ms": 138.08,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 41,
+      "timestamp_ms": 140.16,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 42,
+      "timestamp_ms": 142.74,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 43,
+      "timestamp_ms": 143.73,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_2.cpp.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 44,
+      "timestamp_ms": 144.76,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 45,
+      "timestamp_ms": 145.84,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 46,
+      "timestamp_ms": 147.81,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_3.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 47,
+      "timestamp_ms": 150.78,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 48,
+      "timestamp_ms": 152.35,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 49,
+      "timestamp_ms": 153.09,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 50,
+      "timestamp_ms": 155.77,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 51,
+      "timestamp_ms": 158.63,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_3.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_3.pdf.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 52,
+      "timestamp_ms": 159.55,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.pdf.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 53,
+      "timestamp_ms": 161.21,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 54,
+      "timestamp_ms": 163.38,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_4.jpg"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 55,
+      "timestamp_ms": 166.28,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.jpg",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 56,
+      "timestamp_ms": 167.47,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 57,
+      "timestamp_ms": 170.17,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 58,
+      "timestamp_ms": 171.51,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 59,
+      "timestamp_ms": 173.27,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_4.jpg",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_4.jpg.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 60,
+      "timestamp_ms": 175.73,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.jpg.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 61,
+      "timestamp_ms": 178.07,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 62,
+      "timestamp_ms": 179.05,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_5.jpg"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 63,
+      "timestamp_ms": 181.39,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.jpg",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 64,
+      "timestamp_ms": 182.32,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 65,
+      "timestamp_ms": 184.76,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 66,
+      "timestamp_ms": 187.01,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 67,
+      "timestamp_ms": 189.28,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_5.jpg",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_5.jpg.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 68,
+      "timestamp_ms": 190.98,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.jpg.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 69,
+      "timestamp_ms": 192.49,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 70,
+      "timestamp_ms": 193.04,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_6.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 71,
+      "timestamp_ms": 194.81,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 72,
+      "timestamp_ms": 196.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 73,
+      "timestamp_ms": 197.11,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 74,
+      "timestamp_ms": 199.07,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 75,
+      "timestamp_ms": 200.0,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_6.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_6.pdf.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 76,
+      "timestamp_ms": 201.26,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.pdf.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 77,
+      "timestamp_ms": 202.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 78,
+      "timestamp_ms": 204.39,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_7.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 79,
+      "timestamp_ms": 205.69,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 80,
+      "timestamp_ms": 207.12,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 81,
+      "timestamp_ms": 209.59,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 82,
+      "timestamp_ms": 211.07,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 83,
+      "timestamp_ms": 212.96,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_7.cpp.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 84,
+      "timestamp_ms": 213.89,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 85,
+      "timestamp_ms": 216.56,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 86,
+      "timestamp_ms": 218.95,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_8.docx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 87,
+      "timestamp_ms": 220.78,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 88,
+      "timestamp_ms": 222.16,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 89,
+      "timestamp_ms": 224.65,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 90,
+      "timestamp_ms": 227.49,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 91,
+      "timestamp_ms": 229.0,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_8.docx.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 92,
+      "timestamp_ms": 231.4,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 93,
+      "timestamp_ms": 234.37,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 94,
+      "timestamp_ms": 235.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_9.sql"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 95,
+      "timestamp_ms": 236.83,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.sql",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 96,
+      "timestamp_ms": 238.8,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 97,
+      "timestamp_ms": 239.93,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 98,
+      "timestamp_ms": 240.88,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 99,
+      "timestamp_ms": 241.41,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_9.sql",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_9.sql.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 100,
+      "timestamp_ms": 244.04,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.sql.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 101,
+      "timestamp_ms": 244.96,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 102,
+      "timestamp_ms": 246.08,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_10.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 103,
+      "timestamp_ms": 247.26,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 104,
+      "timestamp_ms": 248.48,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 105,
+      "timestamp_ms": 250.41,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 106,
+      "timestamp_ms": 252.4,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 107,
+      "timestamp_ms": 254.87,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_10.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_10.pdf.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 108,
+      "timestamp_ms": 256.88,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.pdf.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 109,
+      "timestamp_ms": 259.02,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 110,
+      "timestamp_ms": 259.94,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_11.sql"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 111,
+      "timestamp_ms": 262.18,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.sql",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 112,
+      "timestamp_ms": 262.78,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 113,
+      "timestamp_ms": 264.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 114,
+      "timestamp_ms": 264.8,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 115,
+      "timestamp_ms": 267.6,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_11.sql",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_11.sql.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 116,
+      "timestamp_ms": 270.33,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.sql.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 117,
+      "timestamp_ms": 272.9,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 118,
+      "timestamp_ms": 275.81,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_12.docx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 119,
+      "timestamp_ms": 277.21,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_12.docx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 120,
+      "timestamp_ms": 278.2,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_12.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 121,
+      "timestamp_ms": 278.86,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 122,
+      "timestamp_ms": 281.45,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_12.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 123,
+      "timestamp_ms": 283.57,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_12.docx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_12.docx.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 124,
+      "timestamp_ms": 284.12,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_12.docx.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 125,
+      "timestamp_ms": 285.2,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 126,
+      "timestamp_ms": 285.82,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_13.docx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 127,
+      "timestamp_ms": 288.22,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_13.docx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 128,
+      "timestamp_ms": 290.16,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_13.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 129,
+      "timestamp_ms": 291.27,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 130,
+      "timestamp_ms": 293.68,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_13.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 131,
+      "timestamp_ms": 295.53,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_13.docx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_13.docx.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 132,
+      "timestamp_ms": 296.47,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_13.docx.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 133,
+      "timestamp_ms": 297.37,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 134,
+      "timestamp_ms": 299.03,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_14.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 135,
+      "timestamp_ms": 299.75,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_14.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 136,
+      "timestamp_ms": 301.73,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_14.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 137,
+      "timestamp_ms": 303.18,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 138,
+      "timestamp_ms": 303.7,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_14.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 139,
+      "timestamp_ms": 304.31,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_14.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_14.cpp.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 140,
+      "timestamp_ms": 307.23,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_14.cpp.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 141,
+      "timestamp_ms": 310.06,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 142,
+      "timestamp_ms": 311.71,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_15.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 143,
+      "timestamp_ms": 313.86,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_15.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 144,
+      "timestamp_ms": 315.16,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_15.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 145,
+      "timestamp_ms": 316.36,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 146,
+      "timestamp_ms": 317.14,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_15.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 147,
+      "timestamp_ms": 319.35,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_15.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_15.pdf.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 148,
+      "timestamp_ms": 320.9,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_15.pdf.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 149,
+      "timestamp_ms": 323.5,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 150,
+      "timestamp_ms": 326.44,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_16.sql"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 151,
+      "timestamp_ms": 329.11,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_16.sql",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 152,
+      "timestamp_ms": 330.59,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_16.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 153,
+      "timestamp_ms": 331.64,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 154,
+      "timestamp_ms": 333.45,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_16.sql",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 155,
+      "timestamp_ms": 336.3,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_16.sql",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_16.sql.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 156,
+      "timestamp_ms": 336.82,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_16.sql.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 157,
+      "timestamp_ms": 338.76,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 158,
+      "timestamp_ms": 340.41,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_17.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 159,
+      "timestamp_ms": 341.41,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_17.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 160,
+      "timestamp_ms": 342.97,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_17.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 161,
+      "timestamp_ms": 344.58,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 162,
+      "timestamp_ms": 346.15,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_17.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 163,
+      "timestamp_ms": 347.01,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_17.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_17.pdf.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 164,
+      "timestamp_ms": 348.07,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_17.pdf.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 165,
+      "timestamp_ms": 348.85,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 166,
+      "timestamp_ms": 351.57,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_18.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 167,
+      "timestamp_ms": 354.03,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_18.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 168,
+      "timestamp_ms": 354.82,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_18.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 169,
+      "timestamp_ms": 356.93,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 170,
+      "timestamp_ms": 359.41,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_18.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 171,
+      "timestamp_ms": 360.55,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_18.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_18.cpp.phobos",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 172,
+      "timestamp_ms": 362.84,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_18.cpp.phobos",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 173,
+      "timestamp_ms": 365.75,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 262,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 174,
+      "timestamp_ms": 372.15,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Phobos.txt",
+        "access": "GENERIC_WRITE",
+        "mode": "CREATE_ALWAYS"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 175,
+      "timestamp_ms": 383.65,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Phobos.txt",
+        "text": "YOUR FILES HAVE BEEN ENCRYPTED! CONTACT DECRYPTOR TEAM."
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 176,
+      "timestamp_ms": 393.38,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 177,
+      "timestamp_ms": 400.49,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "ShellExecute",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "file": "notepad.exe",
+        "parameters": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Phobos.txt",
+        "show": "SW_SHOW"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 178,
+      "timestamp_ms": 406.7,
+      "process_id": 4200,
+      "process_name": "phobos-sim.exe",
+      "thread_id": 261,
+      "api_name": "RegSetValueEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "subkey": "Control Panel\\Desktop",
+        "value_name": "Wallpaper",
+        "data": "ransom_note.bmp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    }
+  ]
+}

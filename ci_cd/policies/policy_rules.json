@@ -1,0 +1,43 @@
+{
+  "policy_name": "STRIDE-Compliant GNN CI/CD Release Policy",
+  "version": "1.2.0",
+  "thresholds": {
+    "pass_max_risk": 39.0,
+    "warn_max_risk": 69.0,
+    "block_min_risk": 70.0
+  },
+  "rules": [
+    {
+      "rule_id": "SEC-GNN-01",
+      "name": "High Risk Behavior Block",
+      "severity": "CRITICAL",
+      "condition": "risk_score >= 70.0",
+      "action": "BLOCK",
+      "rationale": "GNN behavioral classifier identified pervasive malicious patterns consistent with ransomware."
+    },
+    {
+      "rule_id": "SEC-GNN-02",
+      "name": "Shadow Copy Deletion Defense Evasion",
+      "severity": "CRITICAL",
+      "condition": "contains_any(arguments, ['vssadmin', 'delete shadows', 'bcdedit', 'recoveryenabled No'])",
+      "action": "BLOCK",
+      "rationale": "Inhibiting system recovery is an unambiguous ransomware defense evasion tactic."
+    },
+    {
+      "rule_id": "SEC-GNN-03",
+      "name": "Unapproved Cryptographic Loop with Mass File Traversal",
+      "severity": "CRITICAL",
+      "condition": "has_api('CryptEncrypt') and has_api('FindFirstFile') and p_ransomware > 0.40",
+      "action": "BLOCK",
+      "rationale": "High-velocity cryptographic file transformation detected."
+    },
+    {
+      "rule_id": "SEC-GNN-04",
+      "name": "Suspicious Memory Injection or Reconnaissance",
+      "severity": "MEDIUM",
+      "condition": "risk_score >= 40.0 and risk_score < 70.0",
+      "action": "WARN",
+      "rationale": "Artifact exhibits suspicious API patterns requiring human security audit before deployment."
+    }
+  ]
+}

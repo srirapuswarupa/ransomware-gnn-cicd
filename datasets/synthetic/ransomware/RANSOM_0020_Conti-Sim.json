@@ -1,0 +1,1814 @@
+{
+  "metadata": {
+    "sample_id": "RANSOM_0020_Conti-Sim",
+    "sha256": "bbf2b160f94d6d8e0928c911859fa62afd15182403f7182de98cd5e4bb2d4ee4",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "ransomware",
+    "label_id": 2,
+    "family": "Conti-Sim",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 123,
+    "duration_ms": 314.8
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 1.19,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "IsDebuggerPresent",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 3.38,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CheckRemoteDebuggerPresent",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 8.32,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetComputerName",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 11.29,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 14.86,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetLogicalDrives",
+      "category": "File_Enumeration",
+      "arguments": {
+        "mask": "0x3F"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 19.5,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "C:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 23.87,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "D:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 28.62,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "GetDriveType",
+      "category": "System_Util",
+      "arguments": {
+        "drive": "Z:\\"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 32.85,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "ShellExecute",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "file": "vssadmin.exe",
+        "parameters": "delete shadows /all /quiet",
+        "show": "SW_HIDE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 38.54,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CreateProcess",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "app": "bcdedit.exe",
+        "cmdline": "/set {default} recoveryenabled No"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 51.45,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CreateProcess",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "app": "wbadmin.exe",
+        "cmdline": "delete catalog -quiet"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 56.11,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "RegOpenKeyEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "root": "HKLM",
+        "subkey": "SYSTEM\\CurrentControlSet\\Services"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 71.03,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "RegSetValueEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "value_name": "DisableMonitoring",
+        "data": "1"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 78.2,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CryptAcquireContext",
+      "category": "Cryptography",
+      "arguments": {
+        "provider": "PROV_RSA_AES",
+        "flags": "CRYPT_VERIFYCONTEXT"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 84.55,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CryptGenRandom",
+      "category": "Cryptography",
+      "arguments": {
+        "bytes": 32
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 87.91,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CryptGenKey",
+      "category": "Cryptography",
+      "arguments": {
+        "alg_id": "CALG_AES_256"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 90.43,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CryptExportKey",
+      "category": "Cryptography",
+      "arguments": {
+        "key_blob": "<MASTER_PUBLIC_KEY>"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 96.78,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 103.65,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "<REMOTE_IP>:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 110.55,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "EXFILTRATE_SESSION_KEY",
+        "size": 512
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 115.78,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 117.78,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "FindFirstFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\*"
+      },
+      "return_value": "VALID_HANDLE",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 121.45,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_0.zip"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 122.59,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.zip",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 125.06,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 125.83,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 128.7,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 129.39,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_0.zip",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_0.zip.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 130.71,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_0.zip.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 132.74,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 134.19,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_1.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 136.44,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 32,
+      "timestamp_ms": 139.25,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 33,
+      "timestamp_ms": 141.21,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 34,
+      "timestamp_ms": 142.01,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 35,
+      "timestamp_ms": 143.31,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_1.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_1.cpp.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 36,
+      "timestamp_ms": 144.18,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_1.cpp.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 37,
+      "timestamp_ms": 146.14,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 38,
+      "timestamp_ms": 149.05,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_2.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 39,
+      "timestamp_ms": 150.59,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 40,
+      "timestamp_ms": 152.2,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 41,
+      "timestamp_ms": 153.01,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 42,
+      "timestamp_ms": 154.83,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 43,
+      "timestamp_ms": 156.77,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_2.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_2.cpp.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 44,
+      "timestamp_ms": 158.93,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_2.cpp.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 45,
+      "timestamp_ms": 161.87,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 46,
+      "timestamp_ms": 164.3,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 47,
+      "timestamp_ms": 166.01,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 48,
+      "timestamp_ms": 166.74,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 49,
+      "timestamp_ms": 169.15,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 50,
+      "timestamp_ms": 171.43,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 51,
+      "timestamp_ms": 172.81,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 52,
+      "timestamp_ms": 175.4,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_3.xlsx.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 53,
+      "timestamp_ms": 176.51,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 54,
+      "timestamp_ms": 178.84,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_4.zip"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 55,
+      "timestamp_ms": 179.86,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.zip",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 56,
+      "timestamp_ms": 180.55,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 57,
+      "timestamp_ms": 183.48,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 58,
+      "timestamp_ms": 184.13,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 59,
+      "timestamp_ms": 184.67,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_4.zip",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_4.zip.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 60,
+      "timestamp_ms": 185.71,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_4.zip.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 61,
+      "timestamp_ms": 188.25,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 62,
+      "timestamp_ms": 189.97,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_5.pdf"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 63,
+      "timestamp_ms": 191.32,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.pdf",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 64,
+      "timestamp_ms": 193.86,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 65,
+      "timestamp_ms": 196.26,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 66,
+      "timestamp_ms": 198.05,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.pdf",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 67,
+      "timestamp_ms": 199.33,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_5.pdf",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_5.pdf.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 68,
+      "timestamp_ms": 202.19,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_5.pdf.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 69,
+      "timestamp_ms": 204.46,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 70,
+      "timestamp_ms": 205.35,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_6.zip"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 71,
+      "timestamp_ms": 207.11,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.zip",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 72,
+      "timestamp_ms": 209.9,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 73,
+      "timestamp_ms": 210.94,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 74,
+      "timestamp_ms": 212.35,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 75,
+      "timestamp_ms": 215.29,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_6.zip",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_6.zip.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 76,
+      "timestamp_ms": 217.96,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_6.zip.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 77,
+      "timestamp_ms": 219.74,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 78,
+      "timestamp_ms": 221.24,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_7.cpp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 79,
+      "timestamp_ms": 221.91,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 80,
+      "timestamp_ms": 223.47,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 81,
+      "timestamp_ms": 225.69,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 82,
+      "timestamp_ms": 228.57,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 83,
+      "timestamp_ms": 230.51,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_7.cpp",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_7.cpp.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 84,
+      "timestamp_ms": 231.27,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_7.cpp.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 85,
+      "timestamp_ms": 232.92,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 86,
+      "timestamp_ms": 235.28,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_8.docx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 87,
+      "timestamp_ms": 236.38,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 88,
+      "timestamp_ms": 239.12,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 89,
+      "timestamp_ms": 240.08,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 90,
+      "timestamp_ms": 240.66,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 91,
+      "timestamp_ms": 242.81,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_8.docx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_8.docx.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 92,
+      "timestamp_ms": 244.44,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_8.docx.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 93,
+      "timestamp_ms": 245.61,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 94,
+      "timestamp_ms": 246.32,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_9.jpg"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 95,
+      "timestamp_ms": 247.89,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.jpg",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 96,
+      "timestamp_ms": 248.77,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 97,
+      "timestamp_ms": 250.53,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 98,
+      "timestamp_ms": 252.3,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.jpg",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 99,
+      "timestamp_ms": 252.93,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_9.jpg",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_9.jpg.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 100,
+      "timestamp_ms": 254.11,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_9.jpg.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 101,
+      "timestamp_ms": 254.86,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 102,
+      "timestamp_ms": 256.31,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_10.zip"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 103,
+      "timestamp_ms": 259.13,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.zip",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 104,
+      "timestamp_ms": 260.12,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 105,
+      "timestamp_ms": 261.09,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 106,
+      "timestamp_ms": 262.03,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.zip",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 107,
+      "timestamp_ms": 263.22,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_10.zip",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_10.zip.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 108,
+      "timestamp_ms": 265.24,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_10.zip.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 109,
+      "timestamp_ms": 267.04,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 110,
+      "timestamp_ms": 269.24,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "FindNextFile",
+      "category": "File_Enumeration",
+      "arguments": {
+        "next_file": "<USER_PROFILE>\\Documents\\financial_record_11.docx"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 111,
+      "timestamp_ms": 271.36,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.docx",
+        "access": "GENERIC_READ | GENERIC_WRITE",
+        "mode": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 112,
+      "timestamp_ms": 274.25,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 113,
+      "timestamp_ms": 275.3,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CryptEncrypt",
+      "category": "Cryptography",
+      "arguments": {
+        "alg": "AES_256",
+        "block_size": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 114,
+      "timestamp_ms": 275.93,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.docx",
+        "bytes": 65536
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 115,
+      "timestamp_ms": 276.52,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "MoveFileEx",
+      "category": "File_IO",
+      "arguments": {
+        "source": "<USER_PROFILE>\\Documents\\financial_record_11.docx",
+        "destination": "<USER_PROFILE>\\Documents\\financial_record_11.docx.conti",
+        "flags": "MOVEFILE_REPLACE_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 116,
+      "timestamp_ms": 277.69,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "SetFileAttributes",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Documents\\financial_record_11.docx.conti",
+        "attributes": "FILE_ATTRIBUTE_HIDDEN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 117,
+      "timestamp_ms": 278.35,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 414,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 118,
+      "timestamp_ms": 283.16,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Conti.txt",
+        "access": "GENERIC_WRITE",
+        "mode": "CREATE_ALWAYS"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 119,
+      "timestamp_ms": 288.97,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "WriteFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Conti.txt",
+        "text": "YOUR FILES HAVE BEEN ENCRYPTED! CONTACT DECRYPTOR TEAM."
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 120,
+      "timestamp_ms": 297.94,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 121,
+      "timestamp_ms": 307.66,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "ShellExecute",
+      "category": "Defense_Evasion",
+      "arguments": {
+        "file": "notepad.exe",
+        "parameters": "<USER_PROFILE>\\Desktop\\README_RESTORE_FILES_Conti.txt",
+        "show": "SW_SHOW"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 122,
+      "timestamp_ms": 314.8,
+      "process_id": 6045,
+      "process_name": "conti-sim.exe",
+      "thread_id": 413,
+      "api_name": "RegSetValueEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "subkey": "Control Panel\\Desktop",
+        "value_name": "Wallpaper",
+        "data": "ransom_note.bmp"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    }
+  ]
+}

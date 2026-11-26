@@ -1,0 +1,51 @@
+name: DevSecOps CI/CD Behavioral Ransomware Screening
+
+on:
+  push:
+    branches: [ "main", "release/*" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-screen:
+    runs-on: ubuntu-latest
+    name: Build, Verify Integrity, and Screen via GNN Behavioral Analysis
+
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Defensive Analysis Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile / Assemble Artifact
+        run: |
+          echo "[*] Compiling build artifact in isolated container..."
+          mkdir -p dist
+          echo "BUILT_BINARY_STUB" > dist/production_service.exe
+          sha256sum dist/production_service.exe > dist/checksum.sha256
+
+      - name: Supply Chain Integrity & Static Check
+        run: |
+          echo "[*] Verifying cryptographic artifact hash..."
+          sha256sum -c dist/checksum.sha256
+
+      - name: Execute GNN Behavioral Analysis Security Gate
+        run: |
+          echo "[*] Screening behavior trace against GNN Policy Engine..."
+          python ci_cd/runner.py --artifact "production_service.exe" --fixture benign --stage "Pre-Deployment Gate"
+
+      - name: Archive Audit Logs and Screening Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-screening-reports
+          path: reports/generated/

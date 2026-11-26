@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "sample_id": "BENIGN_0013_Benign-SystemMonitor",
+    "sha256": "e88190121ada2b68ee22f17e602c0f7448c0072920d3aeb7489eabdaddaed2ea",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "benign",
+    "label_id": 0,
+    "family": "Benign-SystemMonitor",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 32,
+    "duration_ms": 295.9
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 7.87,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "GetSystemTime",
+      "category": "System_Util",
+      "arguments": {
+        "format": "UTC"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 14.79,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "GetModuleHandle",
+      "category": "System_Util",
+      "arguments": {
+        "module": "kernel32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 18.21,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "GetProcAddress",
+      "category": "System_Util",
+      "arguments": {
+        "symbol": "VirtualAlloc"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 22.06,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "LoadLibrary",
+      "category": "System_Util",
+      "arguments": {
+        "path": "advapi32.dll"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 25.52,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "cores": 8
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 31.62,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "VirtualAlloc",
+      "category": "Process_Memory",
+      "arguments": {
+        "size": 65536,
+        "protection": "PAGE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 46.29,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 55.48,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_0.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 66.55,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x1576"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 70.19,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 12
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 83.54,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 93.0,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_1.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 101.1,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x2352"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 108.83,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 114.11,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 15,
+      "timestamp_ms": 127.31,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_2.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 16,
+      "timestamp_ms": 130.8,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0xfb4"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 17,
+      "timestamp_ms": 133.64,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 13
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 18,
+      "timestamp_ms": 143.15,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 19,
+      "timestamp_ms": 154.07,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_3.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 20,
+      "timestamp_ms": 158.04,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x2360"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 21,
+      "timestamp_ms": 170.59,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 14
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 22,
+      "timestamp_ms": 185.51,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CreateFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "access": "GENERIC_READ",
+        "creation": "OPEN_EXISTING"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 23,
+      "timestamp_ms": 189.05,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ReadFile",
+      "category": "File_IO",
+      "arguments": {
+        "path": "<USER_PROFILE>\\project\\source_module_4.dat",
+        "bytes_requested": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 24,
+      "timestamp_ms": 200.99,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "CloseHandle",
+      "category": "System_Util",
+      "arguments": {
+        "handle": "0x175a"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 25,
+      "timestamp_ms": 210.87,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "Sleep",
+      "category": "System_Util",
+      "arguments": {
+        "duration_ms": 15
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 26,
+      "timestamp_ms": 220.38,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {
+        "version": "2.2"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 27,
+      "timestamp_ms": 235.83,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "repo.internal.corp:443"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 28,
+      "timestamp_ms": 249.84,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "payload_type": "HTTP_GET_METADATA"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 29,
+      "timestamp_ms": 263.7,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "recv",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "200_OK"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 30,
+      "timestamp_ms": 285.9,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {
+        "status": "CLEAN"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 31,
+      "timestamp_ms": 295.9,
+      "process_id": 6888,
+      "process_name": "benign-systemmonitor.exe",
+      "thread_id": 244,
+      "api_name": "ExitProcess",
+      "category": "System_Util",
+      "arguments": {
+        "exit_code": 0
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}

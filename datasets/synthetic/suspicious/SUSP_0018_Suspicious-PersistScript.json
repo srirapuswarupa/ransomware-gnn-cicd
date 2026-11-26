@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "sample_id": "SUSP_0018_Suspicious-PersistScript",
+    "sha256": "3aca53d11953f59c3fac2442f3e0c4b280d209eac24530ff55778d43c18c3e13",
+    "platform": "windows",
+    "architecture": "x64",
+    "label": "suspicious",
+    "label_id": 1,
+    "family": "Suspicious-PersistScript",
+    "is_synthetic": true,
+    "collection_source": "Dynamic-Trace-Simulation-Engine",
+    "total_calls": 15,
+    "duration_ms": 174.83
+  },
+  "events": [
+    {
+      "call_index": 0,
+      "timestamp_ms": 4.37,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "GetSystemInfo",
+      "category": "System_Discovery",
+      "arguments": {
+        "arch": "x64",
+        "processors": 16
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 1,
+      "timestamp_ms": 12.4,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "IsDebuggerPresent",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 2,
+      "timestamp_ms": 19.98,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "GetComputerName",
+      "category": "System_Discovery",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 3,
+      "timestamp_ms": 26.88,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "GetLogicalDrives",
+      "category": "File_Enumeration",
+      "arguments": {
+        "mask": "0x3F"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 4,
+      "timestamp_ms": 33.48,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "RegOpenKeyEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "root": "HKLM",
+        "subkey": "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 5,
+      "timestamp_ms": 37.14,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "RegSetValueEx",
+      "category": "Registry_Service",
+      "arguments": {
+        "value_name": "SysTask",
+        "data": "<USER_PROFILE>\\helper.exe"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 6,
+      "timestamp_ms": 44.62,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "RegCloseKey",
+      "category": "Registry_Service",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 7,
+      "timestamp_ms": 58.92,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "OpenProcess",
+      "category": "Process_Memory",
+      "arguments": {
+        "target_pid": 1204,
+        "desired_access": "PROCESS_ALL_ACCESS"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 8,
+      "timestamp_ms": 68.96,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "VirtualAllocEx",
+      "category": "Process_Memory",
+      "arguments": {
+        "target_pid": 1204,
+        "size": 8192,
+        "protection": "PAGE_EXECUTE_READWRITE"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 9,
+      "timestamp_ms": 87.94,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "WriteProcessMemory",
+      "category": "Process_Memory",
+      "arguments": {
+        "target_pid": 1204,
+        "bytes": 4096
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 10,
+      "timestamp_ms": 100.66,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "CreateRemoteThread",
+      "category": "Process_Memory",
+      "arguments": {
+        "target_pid": 1204,
+        "start_address": "0x7ffa0000"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 11,
+      "timestamp_ms": 128.86,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "WSAStartup",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    },
+    {
+      "call_index": 12,
+      "timestamp_ms": 146.14,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "connect",
+      "category": "Network_C2",
+      "arguments": {
+        "endpoint": "<REMOTE_IP>:8080"
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 13,
+      "timestamp_ms": 157.17,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "send",
+      "category": "Network_C2",
+      "arguments": {
+        "bytes": 256,
+        "encrypted": false
+      },
+      "return_value": "SUCCESS",
+      "is_sensitive": true
+    },
+    {
+      "call_index": 14,
+      "timestamp_ms": 174.83,
+      "process_id": 6349,
+      "process_name": "susp_tool.exe",
+      "thread_id": 116,
+      "api_name": "closesocket",
+      "category": "Network_C2",
+      "arguments": {},
+      "return_value": "SUCCESS",
+      "is_sensitive": false
+    }
+  ]
+}
