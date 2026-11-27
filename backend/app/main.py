@@ -26,9 +26,12 @@ app = FastAPI(
 )
 
 # CORS Configuration
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=[
+        "https://ransomware-gnn-frontend.onrender.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
